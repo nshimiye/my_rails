@@ -1,4 +1,19 @@
 FirstApp::Application.routes.draw do
+  resources :users
+
+
+  resources :uploads
+
+
+  resources :lectures
+
+
+  resources :courses
+
+
+  resources :assignments
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
