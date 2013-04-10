@@ -1,7 +1,7 @@
 class Assignment
   include Mongoid::Document
 
-  has_many :upload
+  embeds_many :uploads
   belongs_to :lecture
 
   field :number, :type => Integer

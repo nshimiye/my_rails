@@ -1,8 +1,7 @@
 class User
   include Mongoid::Document
 
-  belongs_to :course
-  has_many :upload
+  has_and_belongs_to_many :courses
 
   field :field_name, :type => String
   field :last_name, :type => String
