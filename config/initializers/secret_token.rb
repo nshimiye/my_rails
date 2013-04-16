@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-FirstApp::Application.config.secret_token = '25c18e847d0b61e7921f2de1d01fae27568448d3675c699b4bc167c83697bbb881b429f4c0d5a878485dddb62623992e2bc10123d75652caf5157e058ebbe3de'
+Courszilla::Application.config.secret_token = 'd8a040d8e535f4a59ad853696410fb6a104a6f912beb1157456a2c25fe4425340752093b72e01a8f6a5a0225281ec7b21b64a0db2d041e72153f2e0ff7f43e27'

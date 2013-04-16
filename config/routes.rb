@@ -1,18 +1,15 @@
-FirstApp::Application.routes.draw do
+Courszilla::Application.routes.draw do
   resources :users
-
-
-  resources :uploads
-
-
-  resources :lectures
-
-
   resources :courses
+  #resources :assignments
+  resources :session
 
+  match "signup" => "users#new", :as => "signup"
+  match "login" => "sessions#new", :as => "login", :via => :get
+  match "login" => "sessions#create", :as => "login", :via => :post
 
-  resources :assignments
-
+  match "logout" => "sessions#destroy", :as => "logout"
+  root :to => "sessions#new"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
