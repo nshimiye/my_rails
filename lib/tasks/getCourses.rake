@@ -11,8 +11,9 @@ namespace :import do
 					row[i].strip
 				end
 			end
-			Course.create(:CallNumber => row[0], :CourseTitle => row[1], :StartTime => row[2], :EndTime => row[3], :MeetsOn => row[4], :Building => row[5], :Room => row[6], :InstructorName => row[7])
-		end
+			course = Course.create(:CallNumber => row[0], :CourseTitle => row[1], :StartTime => row[2], :EndTime => row[3], :MeetsOn => row[4], :Building => row[5], :Room => row[6], :InstructorName => row[7])
+      course.save
+    end
 		puts "done reading CSV"
 	end
 end

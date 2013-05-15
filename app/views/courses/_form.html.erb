@@ -12,8 +12,41 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.label :"Call Number" %><br />
+    <%= f.number_field :CallNumber %>
+  </div>
+   <div class="field">
+    <%= f.label :"Course Title" %><br />
+    <%= f.text_field :CourseTitle %>
+  </div>
+     <div class="field">
+    <%= f.label :"Start Time" %><br />
+    <%= f.text_field :StartTime %>
+  </div>
+    </div>
+     <div class="field">
+    <%= f.label :"End Time" %><br />
+    <%= f.text_field :EndTime %>
+  </div>
+    </div>
+     <div class="field">
+    <%= f.label :"Meets On" %><br />
+    <%= f.text_field :MeetsOn %>
+  </div>
+    </div>
+     <div class="field">
+    <%= f.label :Building %><br />
+    <%= f.text_field :Building %>
+  </div>
+    </div>
+     <div class="field">
+    <%= f.label :Room %><br />
+    <%= f.text_field :Room %>
+  </div>
+    </div>
+     <div class="field">
+    <%= f.label :"Instructor's Name" %><br />
+    <%= f.text_field :InstructorName %>
   </div>
   <div class="actions">
     <%= f.submit %>

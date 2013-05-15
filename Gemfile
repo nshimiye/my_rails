@@ -6,6 +6,7 @@ gem 'rails', '~> 3.2.0'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem "mongoid", "~>3.0.0"
+gem 'bson_ext'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -20,6 +21,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'mongoid_slug'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

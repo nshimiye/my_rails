@@ -1,10 +1,52 @@
 <p id="notice"><%= notice %></p>
-
 <p>
-  <b>Title:</b>
-  <%= @course.title %>
+  <b>Announcement:</b>
+  <%= @course.Announcement %>
+</p>
+<p>
+  <b>Call Number:</b>
+  <%= @course.CallNumber %>
 </p>
 
+<p>
+  <b>Course Title:</b>
+  <%= @course.CourseTitle %>
+</p>
 
-<%= link_to 'Edit', edit_course_path(@course) %> |
+<p>
+  <b>Start Time:</b>
+  <%= @course.StartTime %>
+</p>
+
+<p>
+  <b>End Time:</b>
+  <%= @course.EndTime %>
+</p>
+
+<p>
+  <b>Meets On:</b>
+  <%= @course.MeetsOn %>
+</p>
+
+<p>
+  <b>Building:</b>
+  <%= @course.Building %>
+</p>
+
+<p>
+  <b>Room:</b>
+  <%= @course.Room %>
+</p>
+
+<p>
+  <b>Instructor's Name:</b>
+  <%= @course.InstructorName %>
+</p>
+
+<% current_user = User.find(session[:user_id]) %>
+  <% if current_user.role == "admin" %>
+  	<%= link_to 'Edit', edit_course_path(@course) %> |
+  <% end %>
+
+
 <%= link_to 'Back', courses_path %>

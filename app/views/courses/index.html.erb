@@ -10,14 +10,25 @@
 
 <% @courses.each do |course| %>
   <tr>
-    <td><%= course.title %></td>
+    <td><%= course.CourseTitle %></td>
     <td><%= link_to 'Show', course %></td>
-    <td><%= link_to 'Edit', edit_course_path(course) %></td>
-    <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td></td>
+    <% current_user = User.find(session[:user_id]) %>
+      <% if current_user.role == "admin" %>
+        <td><%= link_to 'Edit', edit_course_path(course) %></td>
+        <td></td>
+        <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td></td>
+        <td><%= link_to 'Add student', add_student_path(course) %></td>
+        <td></td>
+        <td><%= link_to 'Add announcement', add_announcement_path(course) %></td>
+      <% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New Course', new_course_path %>
+<% current_user = User.find(session[:user_id]) %>
+  <% if current_user.role == "admin" %>
+    <%= link_to 'New Course', new_course_path %>
+  <% end %>

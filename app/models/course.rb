@@ -1,5 +1,6 @@
 class Course
   include Mongoid::Document
+  include Mongoid::Slug
 
   has_and_belongs_to_many :users
   has_many :lectures
@@ -12,4 +13,6 @@ class Course
   field :Building, type: String
   field :Room, type: String
   field :InstructorName, type: String
+  field :Announcement, type: String
+  slug :CourseTitle
 end

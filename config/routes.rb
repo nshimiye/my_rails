@@ -1,17 +1,22 @@
 Courszilla::Application.routes.draw do
+  resources :courses
+
+
   resources :users
   resources :courses
   #resources :assignments
   resources :session
 
+
   match "signup" => "users#new", :as => "signup"
   match "login" => "sessions#new", :as => "login", :via => :get
   match "login" => "sessions#create", :as => "login", :via => :post
-
+  match "courses/:id/add_student" => "courses#add_student", :as => "add_student"
+  match "courses/:id/add_announcement" => "courses#add_announcement", :as => "add_announcement"
   match "logout" => "sessions#destroy", :as => "logout"
   root :to => "sessions#new"
 
-  # The priority is based upon order of creation:
+  # The priority is based upon order of2 creation:
   # first created -> highest priority.
 
   # Sample of regular route:
