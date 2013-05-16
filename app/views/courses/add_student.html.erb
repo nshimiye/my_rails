@@ -1,0 +1,10 @@
+<h1>Add Student to Course</h1>
+  <% if @valid_input == false %>
+  	<%= "Invalid username" %>
+  <% end %>
+
+<%= form_tag(:controller => "courses", :action => "add_student") do %>
+	<%= label_tag(:email, "Add Student Email:") %>
+	<%= text_field_tag(:email) %>
+	<%= submit_tag("Add Student") %>
+<% end %>

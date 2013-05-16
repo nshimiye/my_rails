@@ -1,0 +1,7 @@
+<h1>Add Announcement to Course</h1>
+
+<%= form_tag(:controller => "courses", :action => "add_announcement") do %>
+	<%= label_tag(:announcement, "Add Announcement to Course:") %>
+	<%= text_field_tag(:announcement) %>
+	<%= submit_tag("Add Announcement") %>
+<% end %>
