@@ -15,4 +15,6 @@ class Course
   field :InstructorName, type: String
   field :Announcement, type: String
   slug :CourseTitle
+
+  validates_presence_of :CourseTitle
 end

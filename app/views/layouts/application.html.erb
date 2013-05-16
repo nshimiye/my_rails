@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+
+
+<%= link_to 'Sign Up', signup_path %>
+<%= link_to 'Log In', root_path %>
+<%= link_to 'Log Out', logout_path("current") %>
+
 <html>
 <head>
   <title>Courszilla</title>
@@ -9,6 +15,5 @@
 <body>
 
 <%= yield %>
-
 </body>
 </html>

@@ -7,4 +7,5 @@ class User
   field :last_name, type: String
   field :email, type: String
   field :role, type: String, default: "student"
+  validates_presence_of :email
 end

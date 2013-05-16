@@ -10,13 +10,13 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to courses_path
     else
-      render "new"
+      redirect_to root_url, notice: 'Invalid email please re-enter'
     end  
   end
 
   def destroy
     session[:user_id] = nil
-    redirect_to root_url
+    redirect_to root_url, notice: "Logged out"
   end
 
 end
