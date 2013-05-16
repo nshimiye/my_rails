@@ -11,6 +11,7 @@ Courszilla::Application.routes.draw do
   match "signup" => "users#new", :as => "signup"
   match "login" => "sessions#new", :as => "login", :via => :get
   match "login" => "sessions#create", :as => "login", :via => :post
+  match "logout" => "sessions#destroy", :as => "logout"
   match "courses/:id/add_student" => "courses#add_student", :as => "add_student"
   match "courses/:id/add_announcement" => "courses#add_announcement", :as => "add_announcement"
   match "logout" => "sessions#destroy", :as => "logout"
